@@ -65,13 +65,15 @@ npx tauri ios init
 npx tauri ios dev
 ```
 
+The example gives feedback that needs no sight. A tone plays while a finger is on the canvas, and the pitch goes up as the finger moves to the right. The "Touches received" line counts each touch. Turn the ring switch to ring mode, because silent mode mutes the tone.
+
 Checklist, with VoiceOver on:
 
-1. Check "Direct touch on canvas". Focus lands on the canvas and VoiceOver reads "Drawing canvas".
-2. Touches on the canvas draw dots.
-3. Content outside the canvas still reads normally.
-4. The region follows the canvas on scroll and on rotation.
-5. Clear the checkbox. The region is gone.
-6. "Direct touch on whole web view" works in both directions.
-7. "Silent on touch" and "Requires activation" work on iOS 17 or later.
-8. The status line changes when VoiceOver is turned on and off.
+1. Check "Direct touch on canvas". Explore by touch below the "Clear canvas" button. VoiceOver reads "Drawing canvas".
+2. Put a finger on the canvas and move it left and right. The tone plays at once, with no double tap, and the pitch follows the finger. "Touches received" goes up by one.
+3. Headings, checkboxes, and the button outside the canvas still read normally.
+4. Scroll down a short distance with three fingers, then explore by touch. The tone plays only where VoiceOver reads "Drawing canvas". Do the same after you rotate the device.
+5. Clear the checkbox. VoiceOver no longer reads "Drawing canvas", and a touch on the canvas plays no tone.
+6. Check "Direct touch on whole web view". VoiceOver stops reading page items. A touch on the canvas plays the tone. A direct tap on the same checkbox turns it off, and VoiceOver reads the page again.
+7. On iOS 17 or later, with "Silent on touch", VoiceOver says nothing when you touch the canvas. With "Requires activation", the tone plays only after a double tap on the canvas.
+8. "VoiceOver running" reads `true`. Turn VoiceOver off and on. The line changes each time.
