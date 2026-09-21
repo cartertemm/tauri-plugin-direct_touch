@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Direct Touch Example</title>
+		<style>
+			body {
+				font-family: sans-serif;
+				margin: 16px;
+			}
+			label {
+				display: block;
+				margin: 12px 0;
+			}
+			canvas {
+				display: block;
+				width: 100%;
+				height: 300px;
+				border: 2px solid currentColor;
+				touch-action: none;
+			}
+			.spacer {
+				height: 1200px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Direct Touch Example</h1>
+		<p id="supported"></p>
+		<p id="status"></p>
+		<label><input type="checkbox" id="region" /> Direct touch on canvas</label>
+		<label><input type="checkbox" id="silent" /> Silent on touch</label>
+		<label><input type="checkbox" id="activation" /> Requires activation</label>
+		<label><input type="checkbox" id="webview" /> Direct touch on whole web view</label>
+		<button id="clear">Clear canvas</button>
+		<canvas id="canvas"></canvas>
+		<div class="spacer"></div>
+		<p>End of page</p>
+		<script type="module" src="/src/main.ts"></script>
+	</body>
+</html>
