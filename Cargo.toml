@@ -1,0 +1,15 @@
+[package]
+name = "tauri-plugin-direct-touch"
+version = "0.1.0"
+description = "Enable the iOS direct touch accessibility trait in Tauri apps"
+edition = "2021"
+rust-version = "1.77.2"
+license = "MIT OR Apache-2.0"
+links = "tauri-plugin-direct-touch"
+exclude = ["/examples", "/node_modules", "/dist-js", "/docs"]
+
+[dependencies]
+tauri = { version = "2" }
+
+[build-dependencies]
+tauri-plugin = { version = "2", features = ["build"] }

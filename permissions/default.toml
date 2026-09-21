@@ -1,0 +1,11 @@
+[default]
+description = "Allows all direct touch commands"
+permissions = [
+	"allow-is-supported",
+	"allow-set-webview-direct-touch",
+	"allow-set-region",
+	"allow-remove-region",
+	"allow-is-voice-over-running",
+	"allow-register-listener",
+	"allow-remove-listener",
+]
