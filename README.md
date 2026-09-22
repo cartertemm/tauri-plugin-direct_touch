@@ -1,8 +1,10 @@
 # tauri-plugin-direct-touch
 
-A Tauri v2 plugin that turns on the iOS direct touch accessibility trait. With direct touch, VoiceOver passes touches straight to your app. Use it for controls that need raw touch input, such as a drawing area, a game surface, or an instrument.
+A Tauri v2 plugin that makes it possible to use direct touch regions. With direct touch, VoiceOver passes touch gestures straight through to your app.
 
-On Android and desktop, all calls succeed and do nothing.
+This is best used when you need raw input such as a game surface, a drawing area, or an instrument.
+
+this plugin is safe to include in your app on all platforms, though unless the app is running under iOS, all calls succeed and do nothing.
 
 ## Install
 
@@ -50,11 +52,11 @@ await setWebviewDirectTouch(true)
 - `isSupported()`: `true` on iOS.
 - `isVoiceOverRunning()`, `onVoiceOverChanged(handler)`: VoiceOver status.
 
-Known limit: a region updates on scroll, window resize, and element resize. If the element moves for a different reason (for example, content above it changes height), the region updates on the next scroll or resize.
+One limitation to be aware of. A region updates on scroll, window resize, and element resize. If the element moves for a different reason (for example, content above it changes height), the region will update on the next scroll or resize. I have not personally run into this yet, but it could present very brief unexpected behavior.
 
 ## Test on a device
 
-The iOS Simulator has no VoiceOver. Use a real device.
+To run the sample app and test on a physical device:
 
 ```bash
 npm install
@@ -64,16 +66,3 @@ npm install
 npx tauri ios init
 npx tauri ios dev
 ```
-
-The example gives feedback that needs no sight. A tone plays while a finger is on the canvas, and the pitch goes up as the finger moves to the right. The "Touches received" line counts each touch. Turn the ring switch to ring mode, because silent mode mutes the tone.
-
-Checklist, with VoiceOver on:
-
-1. Check "Direct touch on canvas". Explore by touch below the "Clear canvas" button. VoiceOver reads "Drawing canvas".
-2. Put a finger on the canvas and move it left and right. The tone plays at once, with no double tap, and the pitch follows the finger. "Touches received" goes up by one.
-3. Headings, checkboxes, and the button outside the canvas still read normally.
-4. Scroll down a short distance with three fingers, then explore by touch. The tone plays only where VoiceOver reads "Drawing canvas". Do the same after you rotate the device.
-5. Clear the checkbox. VoiceOver no longer reads "Drawing canvas", and a touch on the canvas plays no tone.
-6. Check "Direct touch on whole web view". VoiceOver stops reading page items. A touch on the canvas plays the tone. A direct tap on the same checkbox turns it off, and VoiceOver reads the page again.
-7. On iOS 17 or later, with "Silent on touch", VoiceOver says nothing when you touch the canvas. With "Requires activation", the tone plays only after a double tap on the canvas.
-8. "VoiceOver running" reads `true`. Turn VoiceOver off and on. The line changes each time.
