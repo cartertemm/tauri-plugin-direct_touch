@@ -3,11 +3,24 @@
 	"version": "0.1.0",
 	"description": "JS API for tauri-plugin-direct-touch",
 	"license": "MIT OR Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cartertemm/tauri-plugin-direct_touch.git"
+	},
+	"keywords": [
+		"tauri",
+		"tauri-plugin",
+		"ios",
+		"accessibility",
+		"voiceover"
+	],
 	"type": "module",
 	"main": "./dist-js/index.js",
 	"types": "./dist-js/index.d.ts",
 	"files": [
-		"dist-js"
+		"dist-js",
+		"LICENSE-MIT",
+		"LICENSE-APACHE"
 	],
 	"scripts": {
 		"build": "tsc",

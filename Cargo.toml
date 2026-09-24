@@ -5,8 +5,12 @@ description = "Enable the iOS direct touch accessibility trait in Tauri apps"
 edition = "2021"
 rust-version = "1.77.2"
 license = "MIT OR Apache-2.0"
+repository = "https://github.com/cartertemm/tauri-plugin-direct_touch"
+readme = "README.md"
+keywords = ["tauri", "tauri-plugin", "ios", "accessibility", "voiceover"]
+categories = ["accessibility", "gui"]
 links = "tauri-plugin-direct-touch"
-exclude = ["/examples", "/node_modules", "/dist-js", "/docs"]
+exclude = ["/examples", "/node_modules", "/dist-js", "/docs", "/guest-js", "/package.json", "/package-lock.json", "/tsconfig.json"]
 
 [dependencies]
 tauri = { version = "2" }

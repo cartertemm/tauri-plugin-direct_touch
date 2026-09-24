@@ -12,7 +12,7 @@ This plugin is safe to include in your app on all platforms, though unless the a
 
 ```toml
 [dependencies]
-tauri-plugin-direct-touch = { git = "https://github.com/cartertemm/tauri-plugin-direct-touch" }
+tauri-plugin-direct-touch = "0.1"
 ```
 
 `src-tauri/src/lib.rs`:
@@ -27,7 +27,7 @@ tauri::Builder::default()
 JavaScript:
 
 ```bash
-npm install github:cartertemm/tauri-plugin-direct-touch
+npm install tauri-plugin-direct-touch-api
 ```
 
 ## Use

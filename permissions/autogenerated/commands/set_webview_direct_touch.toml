@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-set-webview-direct-touch"
+description = "Enables the set_webview_direct_touch command without any pre-configured scope."
+commands.allow = ["set_webview_direct_touch"]
+
+[[permission]]
+identifier = "deny-set-webview-direct-touch"
+description = "Denies the set_webview_direct_touch command without any pre-configured scope."
+commands.deny = ["set_webview_direct_touch"]

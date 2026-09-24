@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-is-voice-over-running"
+description = "Enables the is_voice_over_running command without any pre-configured scope."
+commands.allow = ["is_voice_over_running"]
+
+[[permission]]
+identifier = "deny-is-voice-over-running"
+description = "Denies the is_voice_over_running command without any pre-configured scope."
+commands.deny = ["is_voice_over_running"]
