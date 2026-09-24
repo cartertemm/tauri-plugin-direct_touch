@@ -6,12 +6,6 @@ This is best used when you need raw input such as a game surface, a drawing area
 
 This plugin is safe to include in your app on all platforms, though unless the app is running under iOS, all calls succeed and do nothing.
 
-## Important!
-
-This plugin is an active work in progress, and it is definitely not stable. I am still figuring out how to work around a few interoperability limitations.
-
-This notice will be removed as soon as I can confirm that the plugin works reliably on all the iOS devices that I currently have access to.
-
 ## Install
 
 `src-tauri/Cargo.toml`:
