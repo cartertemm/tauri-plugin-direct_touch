@@ -11,3 +11,4 @@
 /examples/tauri-app/src-tauri/target
 /examples/tauri-app/src-tauri/gen
 /ios/Package.resolved
+.DS_Store
