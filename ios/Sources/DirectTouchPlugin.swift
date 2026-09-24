@@ -38,7 +38,7 @@ func setDirectTouch(_ view: UIView, enabled: Bool, silentOnTouch: Bool?, require
 		view.accessibilityTraits.remove(.allowsDirectInteraction)
 	}
 	if #available(iOS 17.0, *) {
-		var options: UIAccessibilityDirectTouchOptions = []
+		var options: UIAccessibility.DirectTouchOptions = []
 		if enabled && silentOnTouch == true {
 			options.insert(.silentOnTouch)
 		}
