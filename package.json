@@ -2,7 +2,7 @@
 	"name": "tauri-plugin-direct-touch-api",
 	"version": "0.1.0",
 	"description": "JS API for tauri-plugin-direct-touch",
-	"license": "MIT OR Apache-2.0",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/cartertemm/tauri-plugin-direct_touch.git"
@@ -19,8 +19,7 @@
 	"types": "./dist-js/index.d.ts",
 	"files": [
 		"dist-js",
-		"LICENSE-MIT",
-		"LICENSE-APACHE"
+		"LICENSE"
 	],
 	"scripts": {
 		"build": "tsc",
